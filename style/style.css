@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+}
+
+.container {
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+nav {
+    background-color: #000;
+    padding: 20px;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-logo img {
+    width: 25%;
+    align-items: center;
+}
+
+.menu-nav {
+    display: flex;
+}
+
+.menu-nav li {
+    margin-left: 2.5rem;
+    list-style: none;
+}
+
+.menu-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+
+.menu-nav a:hover {
+    color: #fa1414;
+    text-decoration: none;
+}
+
+.nav-button a {
+    color: #000;
+    text-decoration: none;
+    background-color: #fff;
+    padding: 10px 20px;
+    border-radius: 2rem;
+    font-size: 18px;
+}
+
+.nav-button a:hover {
+    color: #fff;
+    background-color: #bbbbbb;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Section First */
+.info-first {
+    background-image: url(../images/tesla-bg.jpg);
+    width: 100%;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+.info-first-warpper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 70vh;
+    flex-direction: column;
+}
+
+.tesla-txt {
+    font-size: 50px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+.tesla-txt2 {
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    text-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    opacity: 0;
+    animation: float 5s linear infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+.tesla-btn-warpper {
+    display: flex;
+    gap: 20px;
+}
+
+.tesla-btn-buyer a {
+    color: #000;
+    display: inline-block;
+    background: #fff;
+    text-decoration: none;
+    padding: 10px 110px;
+    transform: translateY(40vh);
+    border-radius: 5px;
+}
+
+.tesla-btn-buyer a:hover {
+    background: #dfdfdf;
+}
+
+
+@media (max-width: 768px) {
+    .menu-nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 10%;
+        background-color: #181818;
+        border-radius: 30px;
+        width: 80%;
+        margin: 0;
+        padding: 0px;
+    }
+
+    .menu-nav.active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .menu-nav li {
+        padding: 15px;
+        transition: all 0.2s;
+        width: 100%;
+        margin: 0;
+        list-style: none;
+        text-align: center;
+    }
+
+    .menu-nav li:hover {
+        background: #000;
+        width: 100%;
+    }
+
+    .menu-nav li:last-child {
+        margin-bottom: 0;
+    }
+
+    .menu-nav li a {
+        width: 100%;
+        font-size: 18px;
+        border-radius: 20px;
+        padding: 10px;
+        display: block;
+        text-decoration: none;
+        color: white;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        width: 30px;
+        padding: 0;
+        background: none;
+        border: none;
+        color: white;
+    }
+
+    .info-first {
+        height: 50vh;
+    }
+
+    .info-first-warpper {
+        height: 50vh;
+    }
+
+    .tesla-txt {
+        font-size: 30px;
+    }
+
+
+    .tesla-txt2 {
+        font-size: 15px;
+    }
+
+    .tesla-btn-warpper {
+        display: flex;
+        gap: 20px;
+    }
+
+    .tesla-btn-buyer a {
+        color: #000;
+        display: inline-block;
+        background: #fff;
+        text-decoration: none;
+        padding: 8px 60px;
+        transform: translateY(5rem);
+        border-radius: 5px;
+    }
+}
